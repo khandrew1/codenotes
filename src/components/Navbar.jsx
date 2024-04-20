@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/Logo.png";
@@ -9,12 +10,14 @@ const Navbar = () => {
         <Image src={Logo} alt="CodeNotes logo" className="w-20 m-5" />
       </Link>
       <div className="flex items-center m-5">
-        <Link
-          href="/"
+        <button
+          onClick={() =>
+            signIn("google", { callbackUrl: "/onboard", redirect: true })
+          }
           className="p-2 text-xl border-4 border-codenotes-blue-200 rounded-md hover:fade"
         >
           Log in
-        </Link>
+        </button>
       </div>
     </div>
   );
