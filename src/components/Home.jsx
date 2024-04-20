@@ -25,7 +25,9 @@ const Content = () => {
         </p>
         <div className="flex">
           <button
-            onClick={() => signIn("google")}
+            onClick={() =>
+              signIn("google", { callbackUrl: "/onboard", redirect: true })
+            }
             className="border-4 border-codenotes-blue-200 rounded-md mt-5 hover:fade p-2 text-xl"
           >
             Log in

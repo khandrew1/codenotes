@@ -4,12 +4,12 @@ import { doc, updateDoc } from "firebase/firestore";
 
 export const POST = async (req) => {
   const res = NextResponse;
-  const { id } = await req.json();
+  const { id, role } = await req.json();
   const userRef = doc(db, "users", id);
 
   try {
     await updateDoc(userRef, {
-      role: "instructor",
+      role: role,
     });
     return res.json({ message: "OK" }, { status: 200 });
   } catch (err) {
