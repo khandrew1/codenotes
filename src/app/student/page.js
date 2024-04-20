@@ -1,4 +1,4 @@
-import Dashboard from "../../../components/student/assignments/dashboard";
+import Dashboard from "@/components/student/assignments/classdashboard";
 const Page = () => {
   return (
     <div>
