@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import logo from "../../../../public/logo.svg";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
 const Sidebar = () => {
   return (
@@ -11,7 +13,10 @@ const Sidebar = () => {
       <p className="font-bold py-4 text-lg">Your Courses</p>
       <p>Welcome to Codenotes! Click on one of courses on the right.</p>
       <div className="mt-auto">
-        <button className="flex items-center justify-center border-[2px] border-codenotes-darkgrey text-codenotes-darkgrey rounded-lg w-full mb-4 py-2 shadow-xl">
+        <button
+          onClick={() => signOut({ callbackUrl: "/", redirect: true })}
+          className="flex items-center justify-center border-[2px] border-codenotes-darkgrey text-codenotes-darkgrey rounded-lg w-full mb-4 py-2 shadow-xl"
+        >
           logout
         </button>
       </div>
