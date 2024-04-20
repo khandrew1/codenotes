@@ -5,7 +5,16 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        codenotes: {
+          white: "#ffffff",
+          "green-100": "#297373",
+          darkgrey: "#252525",
+          offwhite: "#f3f5f6",
+        },
+      },
+    },
   },
   plugins: [],
 };
