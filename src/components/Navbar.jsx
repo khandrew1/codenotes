@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/Logo.png";
+import { signIn } from "next-auth/react";
 
 const Navbar = () => {
   return (
