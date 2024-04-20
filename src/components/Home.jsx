@@ -1,8 +1,10 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import doc from "../../public/document.png";
 import code from "../../public/code.png";
 import { FaSortDown } from "react-icons/fa";
+import { signIn } from "next-auth/react";
 
 const Content = () => {
   return (
@@ -22,12 +24,12 @@ const Content = () => {
           of how your students are doing.
         </p>
         <div className="flex">
-          <Link
-            href="/"
+          <button
+            onClick={() => signIn("google")}
             className="border-4 border-codenotes-blue-200 rounded-md mt-5 hover:fade p-2 text-xl"
           >
             Log in
-          </Link>
+          </button>
         </div>
       </div>
     </div>
