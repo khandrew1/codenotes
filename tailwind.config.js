@@ -5,7 +5,18 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        codenotes: {
+          "black-100": "#252525",
+          "blue-100": "#B2BFF9",
+          "blue-200": "#6380FB",
+          "green-100": "#297373",
+          darkgrey: "#252525",
+          offwhite: "#f3f5f6",
+        },
+      },
+    },
   },
   plugins: [],
 };
