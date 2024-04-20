@@ -1,9 +1,4 @@
 const Page = () => {
-    return (
-      <div>
-          hello world! says stanley
-      </div>
-    );
-  };
-  export default Page;
-  
+  return <div>hello world! says stanley</div>;
+};
+export default Page;
