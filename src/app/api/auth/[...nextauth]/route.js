@@ -19,7 +19,6 @@ export const authOptions = {
           id: profile.sub,
           email: profile.email,
           name: profile.name,
-          image: profile.picture,
           roles: {},
         };
       },
