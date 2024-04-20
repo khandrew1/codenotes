@@ -8,7 +8,7 @@
     "start": "next start",
     "check": "npx prettier --check .",
     "format": "npx prettier --write .",
-    "lint": "npx eslint . --ext js --ext jsx",
+    "eslint": "npx eslint . --ext js --ext jsx",
     "prepare": "husky install"
   },
   "dependencies": {
