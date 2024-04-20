@@ -1,9 +1,4 @@
-import Dashboard from "@/components/student/dashboard/dashboard";
 const Page = () => {
-  return (
-    <div>
-      <Dashboard />
-    </div>
-  );
+  return <div>yeehaw</div>;
 };
 export default Page;
