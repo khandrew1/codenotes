@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .fade {
+    background-color: #6380fb;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+}
