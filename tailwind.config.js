@@ -8,10 +8,11 @@ module.exports = {
     extend: {
       colors: {
         codenotes: {
-          white: "#ffffff",
+          white: "#FFFFFF",
           "green-100": "#297373",
           darkgrey: "#252525",
-          offwhite: "#f3f5f6",
+          lightgrey: "#CFCFCF",
+          offwhite: "#F3F5F6",
         },
       },
     },

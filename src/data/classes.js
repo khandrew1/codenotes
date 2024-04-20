@@ -5,18 +5,18 @@ export const classes = [
     link: "/",
   },
   {
-    name: "INTRODUCTION TO DISCRETE STRUCTURES (MATH_011_010_24W, CS_011_010_24W) - CL",
-    id: "MATH_011_010_24W, CS_011_010_24W ",
+    name: "INTRODUCTION TO DISCRETE STRUCTURES",
+    id: "MATH_011_010_24W, CS_011_010_24W",
     link: "/",
   },
   {
-    name: "MATH_031_003_24S - APPLIED LINEAR ALGEBRA",
-    id: "MATH_031_003_24S",
+    name: "MATH_010A_020_24W - CALCULUS OF SEVERAL VARIABLES",
+    id: "MATH_010A_020_24W",
     link: "/",
   },
   {
-    name: "MATH_031_003_24S - APPLIED LINEAR ALGEBRA",
-    id: "MATH_031_003_24S",
+    name: "MACHINE ORGANIZATION & ASSEMBLY LANGUAGE PROGRAMMING",
+    id: "CS061_002",
     link: "/",
   },
 ];
