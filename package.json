@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 8000",
     "build": "next build",
     "start": "next start",
     "check": "npx prettier --check .",
@@ -12,6 +12,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@auth/firebase-adapter": "^2.0.0",
+    "firebase-admin": "^11.11.1",
+    "next": "14.2.2",
+    "next-auth": "^4.24.7",
     "@excalidraw/excalidraw": "^0.17.6",
     "bootstrap": "^5.3.3",
     "next": "14.2.2",
