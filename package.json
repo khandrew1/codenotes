@@ -8,13 +8,16 @@
     "start": "next start",
     "check": "npx prettier --check .",
     "format": "npx prettier --write .",
-    "eslint": "npx eslint . --ext js --ext jsx",
+    "eslint": "npx eslint .",
     "prepare": "husky install"
   },
   "dependencies": {
+    "@excalidraw/excalidraw": "^0.17.6",
+    "bootstrap": "^5.3.3",
     "next": "14.2.2",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.1.0"
   },
   "devDependencies": {
