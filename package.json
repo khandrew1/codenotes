@@ -18,7 +18,6 @@
     "next-auth": "^4.24.7",
     "@excalidraw/excalidraw": "^0.17.6",
     "bootstrap": "^5.3.3",
-    "next": "14.2.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
