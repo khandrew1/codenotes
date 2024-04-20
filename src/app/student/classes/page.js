@@ -1,8 +1,8 @@
-import ClassDashboard from "../../../components/student/classdashboard/classdashboard";
+import Dashboard from "../../../components/student/dashboard/dashboard";
 const Page = () => {
   return (
     <div>
-      <ClassDashboard />
+      <Dashboard />
     </div>
   );
 };
