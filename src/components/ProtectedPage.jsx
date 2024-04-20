@@ -1,11 +1,12 @@
 "use client";
 import { signIn, useSession } from "next-auth/react";
 import { useEffect } from "react";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Loading from "./Loading";
 
 const ProtectedPage = ({ children, restriction, title }) => {
   const { data: session, status } = useSession();
+  const router = useRouter();
 
   useEffect(() => {
     if (status === "loading") return;
@@ -16,17 +17,17 @@ const ProtectedPage = ({ children, restriction, title }) => {
 
     if (restriction === "onboard") {
       if (session.user.role === "instructor") {
-        redirect(`/instructor`);
+        router.push(`/instructor`);
       } else if (session.user.role === "student") {
-        redirect("/student");
+        router.push("/student");
       }
       return;
     }
 
     if (session.user.role !== restriction) {
-      redirect("/403");
+      router.push("/403");
     }
-  }, [status, restriction, session]);
+  }, [status, restriction, session, router]);
 
   return (
     <>
