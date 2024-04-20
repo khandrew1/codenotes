@@ -1,4 +1,9 @@
+import Dashboard from "@/components/instructor/dashboard/dashboard";
 const Page = () => {
-  return <div>hello world! says stanley</div>;
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  );
 };
 export default Page;
