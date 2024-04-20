@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+// eslint-disable-next-line new-cap
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "check": "npx prettier --check .",
+    "format": "npx prettier --write .",
+    "lint": "npx eslint . --ext js --ext jsx",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "eslint-config-google": "^0.14.0",
     "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18",
@@ -17,7 +19,10 @@
   },
   "devDependencies": {
     "eslint": "^8",
+    "eslint-config-google": "^0.14.0",
     "eslint-config-next": "14.2.2",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.0",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1"
