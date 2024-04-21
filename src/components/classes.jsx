@@ -1,5 +1,6 @@
 import { classes } from "@/data/classes";
-import Classcard from "./classcard";
+import Classcard from "@/components/classcard";
+
 const Classes = () => {
   return (
     <div className="grid grid-cols-3 gap-8">

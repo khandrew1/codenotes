@@ -63,12 +63,21 @@ export default function Canvas() {
   };
 
   return (
-    <div className="w-screen h-[90vh] flex flex-col items-end gap-3">
-      <Excalidraw theme="dark" excalidrawAPI={(api) => setExcalidrawAPI(api)} />
-      <button onClick={onRun} className="px-8 py-2 bg-green-500 rounded">
-        Run
-      </button>
-      {data}
+    <div className="w-screen h-screen">
+      <div className="h-[90vh] flex flex-col items-end gap-3">
+        <Excalidraw
+          theme="dark"
+          excalidrawAPI={(api) => setExcalidrawAPI(api)}
+        />
+      </div>
+      <div className="w-screen h-[10vh] bg-[#121212] pr-4 flex items-center justify-end">
+        <button
+          onClick={onRun}
+          className="h-1/2 w-24 bg-[#403E6A] text-white rounded"
+        >
+          Run
+        </button>
+      </div>
     </div>
   );
 }

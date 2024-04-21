@@ -1,5 +1,5 @@
 import Sidebar from "./sidebar";
-import Classes from "./classes";
+import Classes from "../../classes";
 const Dashboard = () => {
   return (
     <div className="flex flex-row">
