@@ -5,6 +5,7 @@ import { useState } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { gruvboxDark } from "@uiw/codemirror-theme-gruvbox-dark";
 import { cpp } from "@codemirror/lang-cpp";
+import { MdOutlineCancel } from "react-icons/md";
 
 const Excalidraw = dynamic(
   async () => (await import("@excalidraw/excalidraw")).Excalidraw,
@@ -38,8 +39,6 @@ export default function Canvas() {
     if (!elements || !elements.length) {
       return;
     }
-
-    console.log(elements);
 
     const img = await exportToBlob({
       elements: excalidrawAPI.getSceneElements(),
@@ -112,9 +111,17 @@ export default function Canvas() {
             Run
           </button>
         </div>
-        <div className="w-1/2 h-[15vh] bg-[#292929] rounded-md !mr-0">
-          <p className="p-5 text-white">{terminal}</p>
-          {data}
+        <div className="w-1/2 h-[15vh] bg-[#292929] rounded-md !mr-0 flex justify-between items-center">
+          <div className="">
+            <p className="p-5 text-white">console</p>
+            <p className="text-gray-400 px-5">{terminal}</p>
+            <p className="text-gray-400 px-5">{data}</p>
+          </div>
+
+          <MdOutlineCancel
+            className="text-gray-400 text-3xl mx-5 hover:text-red-500 hover:cursor-pointer"
+            onClick={() => setData("")}
+          />
         </div>
       </div>
     </div>
