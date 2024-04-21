@@ -5,16 +5,22 @@ import { FaBars } from "react-icons/fa";
 import { Nav } from "react-bootstrap";
 import { Navbar } from "react-bootstrap";
 import { signIn } from "next-auth/react";
+import Link from "next/link";
 const Navigation = () => {
   return (
     <Navbar expand="lg" fixed="top" className="shadow-md">
-      <Navbar.Brand className="inline-flex ml-4 items-center font-bold !text-2xl !text-codenotes-ooze hover:!text-codenotes-darkgrey">
-        <Image
-          src={lightmodelogo}
-          alt={"lightmodelogo"}
-          className="w-12 te2t-codenotes-ooze hover:text-codenotes-darkgrey"
-        />
-        codenotes
+      <Navbar.Brand className="ml-4">
+        <Link
+          href="/"
+          className="inline-flex no-underline text-2xl items-center text-codenotes-ooze hover:text-codenotes-darkgrey font-bold"
+        >
+          <Image
+            src={lightmodelogo}
+            alt={"lightmodelogo"}
+            className="w-12 my-1"
+          />
+          codenotes
+        </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav">
         <FaBars className="text-xl" />
