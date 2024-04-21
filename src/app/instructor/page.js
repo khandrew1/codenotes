@@ -4,7 +4,7 @@ const Page = () => {
   return (
     <div>
       <ProtectedPage title="Instructor Dashboard" restriction="instructor">
-      <Dashboard />
+        <Dashboard />
       </ProtectedPage>
     </div>
   );
