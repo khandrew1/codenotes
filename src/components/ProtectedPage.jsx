@@ -1,11 +1,13 @@
 "use client";
 import { signIn, useSession } from "next-auth/react";
-import { useEffect } from "react";
-import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Loading from "./Loading";
 
 const ProtectedPage = ({ children, restriction, title }) => {
   const { data: session, status } = useSession();
+  const router = useRouter();
+  const [confirmed, setConfirmed] = useState(false);
 
   useEffect(() => {
     if (status === "loading") return;
@@ -14,30 +16,24 @@ const ProtectedPage = ({ children, restriction, title }) => {
       return;
     }
 
-    if (restriction === "onboard") {
-      if (session.user.role === "instructor") {
-        redirect(`/instructor`);
-      } else if (session.user.role === "student") {
-        redirect("/student");
-      }
-      return;
+    if (restriction !== "onboard" && session.user.role !== restriction) {
+      router.push("/404");
+    } else {
+      setConfirmed(true);
     }
-
-    if (session.user.role !== restriction) {
-      redirect("/403");
-    }
-  }, [status, restriction, session]);
+  }, [status, session, router, restriction]);
 
   return (
     <>
-      {status === "loading" && <Loading />}
-      {status === "authenticated" && (
+      {confirmed ? (
         <>
           <title>{title}</title>
           <div className="w-full h-screen">
             <div className="h-full">{children}</div>
           </div>
         </>
+      ) : (
+        <Loading />
       )}
     </>
   );

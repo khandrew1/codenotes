@@ -2,10 +2,20 @@
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 import Loading from "../Loading";
+import { useRouter } from "next/navigation";
 
 const Onboard = () => {
   const { data: session } = useSession();
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+
+  if (session.user.role === "instructor") {
+    router.push("/instructor");
+  }
+
+  if (session.user.role === "student") {
+    router.push("/student");
+  }
 
   const giveRole = async (role) => {
     setIsLoading(true);
