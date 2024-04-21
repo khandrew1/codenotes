@@ -8,7 +8,7 @@ const Onboard = () => {
   const { data: session } = useSession();
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  
+
   if (session.user.role === "instructor") {
     router.push("/instructor");
   }

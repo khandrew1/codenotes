@@ -21,7 +21,6 @@ const ProtectedPage = ({ children, restriction, title }) => {
     } else {
       setConfirmed(true);
     }
-
   }, [status, session, router, restriction]);
 
   return (
