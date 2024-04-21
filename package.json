@@ -13,7 +13,11 @@
   },
   "dependencies": {
     "@auth/firebase-adapter": "^2.0.0",
+    "@codemirror/lang-cpp": "^6.0.2",
     "@excalidraw/excalidraw": "^0.17.6",
+    "@uiw/codemirror-extensions-langs": "^4.21.25",
+    "@uiw/codemirror-theme-gruvbox-dark": "^4.21.25",
+    "@uiw/react-codemirror": "^4.21.25",
     "clsx": "^2.1.0",
     "firebase": "^10.11.0",
     "firebase-admin": "^11.11.1",
