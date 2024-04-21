@@ -57,6 +57,8 @@ export default function Canvas() {
       }),
     });
 
+    console.log(data);
+
     const data = await response.json();
 
     setData(data);
