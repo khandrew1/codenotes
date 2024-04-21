@@ -1,11 +1,11 @@
 import Image from "next/image";
-import logo from "../../../../public/logo.svg";
+import widelogo from "../../../../public/widelogo.svg";
 import Link from "next/link";
 const ClassSidebar = () => {
   return (
     <div className="w-2/12 flex flex-col pt-4 px-4 border-r-codenotes-darkgrey border-[1px] h-screen">
       <Link href="/">
-        <Image src={logo} alt="logo" />
+        <Image src={widelogo} alt="widelogo" />
       </Link>
       <p className="font-bold py-4 text-lg">Class Dashboard</p>
       <p>
