@@ -21,6 +21,17 @@ module.exports = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        animatedgradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+      },
+      backgroundSize: {
+        "300%": "300%",
+      },
+      animation: {
+        gradient: "animatedgradient 6s linear infinite alternate",
       },
       colors: {
         codenotes: {
@@ -31,6 +42,7 @@ module.exports = {
           "blue-100": "#B2BFF9",
           "blue-200": "#6380FB",
           "green-100": "#297373",
+          "gray-400": "#4F4F58",
           offwhite: "#fafafa",
           lightgrey: "#e4e5f1",
           grey: "#d2d3db",

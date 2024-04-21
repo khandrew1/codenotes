@@ -16,7 +16,7 @@ const Navigation = () => {
       <Navbar.Brand className="ml-4">
         <Link
           href="/"
-          className="inline-flex no-underline text-2xl items-center !text-codenotes-offwhite hover:!text-codenotes-darkgrey font-bold"
+          className="inline-flex no-underline text-2xl items-center !text-codenotes-offwhite font-bold"
         >
           <Image
             src={lightmodelogo}
