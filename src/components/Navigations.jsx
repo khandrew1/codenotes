@@ -4,7 +4,7 @@ import lightmodelogo from "../../public/darkmodelogo.svg";
 import { FaBars } from "react-icons/fa";
 import { Nav } from "react-bootstrap";
 import { Navbar } from "react-bootstrap";
-import { signIn } from "next-auth/react";
+/* import { signIn } from "next-auth/react"; */
 import Link from "next/link";
 const Navigation = () => {
   return (
