@@ -15,7 +15,7 @@ const Sidebar = () => {
       <div className="mt-auto">
         <button
           onClick={() => signOut({ callbackUrl: "/", redirect: true })}
-          className="flex items-center justify-center border-[2px] border-codenotes-darkgrey text-codenotes-darkgrey rounded-lg w-full mb-4 py-2 shadow-xl"
+          className="flex items-center justify-center border-[2px] border-codenotes-darkgrey text-codenotes-darkgrey hover:bg-codenotes-lightgrey rounded-lg w-full mb-4 py-2 shadow-xl"
         >
           <IoMdLogOut className="mx-2 text-xl" />
           logout
