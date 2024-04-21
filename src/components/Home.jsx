@@ -31,7 +31,7 @@ const Content = () => {
         <Image
           src={globe}
           alt="globe"
-          className="w-5/12 relative flex items-center justify-center"
+          className="w-4/12 relative flex items-center justify-center"
         />
       </div>
 
