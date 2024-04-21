@@ -35,13 +35,13 @@ const Navigation = () => {
       >
         <Nav className="space-x-2">
           <Nav.Link
-            href="/#about"
+            href="#about"
             className="!text-codenotes-offwhite hover:!text-codenotes-darkgrey"
           >
             about
           </Nav.Link>
           <Nav.Link
-            href="/#features"
+            href="#features"
             className="!text-codenotes-offwhite hover:!text-codenotes-darkgrey"
           >
             features

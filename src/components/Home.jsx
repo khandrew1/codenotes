@@ -27,11 +27,11 @@ const Content = () => {
       <p className="text-transparent bg-clip-text bg-gradient-to-r from-white to-codenotes-gray-400 pb-2 animate-gradient bg-300% text-4xl text-center font-bold">
         One Assignment at a Time
       </p>
-      <div className="flex justify-center">
+      <div className="flex justify-center overflow-hidden relative">
         <Image
           src={globe}
           alt="globe"
-          className="w-4/12 relative flex items-center justify-center"
+          className="w-8/12 relative flex items-center justify-center z-10"
         />
       </div>
 
