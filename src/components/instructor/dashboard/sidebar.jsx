@@ -2,7 +2,7 @@
 import Image from "next/image";
 import widelogo from "../../../../public/widelogo.svg";
 import Link from "next/link";
-import { signOut } from "next-auth/react";
+import { IoMdLogOut } from "react-icons/io";
 
 const Sidebar = () => {
   return (
@@ -17,6 +17,7 @@ const Sidebar = () => {
           onClick={() => signOut({ callbackUrl: "/", redirect: true })}
           className="flex items-center justify-center border-[2px] border-codenotes-darkgrey text-codenotes-darkgrey rounded-lg w-full mb-4 py-2 shadow-xl"
         >
+          <IoMdLogOut className="mx-2 text-xl" />
           logout
         </button>
       </div>
