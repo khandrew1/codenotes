@@ -15,13 +15,9 @@ const Classcard = () => {
             Why CodeNotes?
           </p>
           <p className="text-codenotes-offwhite pt-4">
-            With at least 25,000 universities and 60,000 high schools in the
-            world, thousands of realms of paper are used daily to print exams
-            and in-class worksheets. That's why we created Codenotes. With the
-            growing prevalence of iPads and tablets for note-taking and
-            education, Codenotes allows students to hand-write code on a digital
-            canvas, and then converts the hand-written code into computer-text
-            to be compiled.
+            {
+              "With at least 25,000 universities and 60,000 high schools in the world, thousands of realms of paper are used daily to print exams and in-class worksheets. That's why we created Codenotes. With the growing prevalence of iPads and tablets for note-taking and education, Codenotes allows students to hand-write code on a digital canvas, and then converts the hand-written code into computer-text to be compiled."
+            }
           </p>
         </div>
         <div className="flex justify-end pr-16">
