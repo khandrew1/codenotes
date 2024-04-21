@@ -26,8 +26,9 @@ export default function Canvas() {
   const [excalidrawAPI, setExcalidrawAPI] = useState(null);
   const [data, setData] = useState("");
   const [code, setCode] = useState("");
+  const [terminal, setTerminal] = useState("");
 
-  const onRun = async () => {
+  const onConvert = async () => {
     if (!excalidrawAPI) {
       return;
     }
@@ -62,6 +63,20 @@ export default function Canvas() {
     const data = await response.json();
 
     setData(data);
+    console.log(data);
+    setCode(data);
+  };
+
+  const onRun = async () => {
+    const response = await fetch("/api/execute", {
+      method: "POST",
+      body: JSON.stringify({ code: code, language: 54 }),
+    });
+
+    const result = await response.json();
+
+    console.log(result);
+    setTerminal(result.result.stdout);
   };
 
   return (
@@ -85,7 +100,7 @@ export default function Canvas() {
       <div className="w-screen h-[20vh] bg-[#121212] flex items-center justify-between">
         <div className="flex">
           <button
-            onClick={onRun}
+            onClick={onConvert}
             className="h-12 w-24 bg-[#403E6A] text-white rounded mx-5"
           >
             Convert
@@ -98,7 +113,7 @@ export default function Canvas() {
           </button>
         </div>
         <div className="w-1/2 h-[15vh] bg-[#292929] rounded-md !mr-0">
-          <p className="p-5 text-white">console</p>
+          <p className="p-5 text-white">{terminal}</p>
           {data}
         </div>
       </div>
