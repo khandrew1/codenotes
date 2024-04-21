@@ -11,9 +11,23 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+      },
       colors: {
         codenotes: {
           "black-100": "#252525",
+          "black-200": "#2A2A2A",
+          "black-300": "#111111",
+          "black-400": "#191919",
           "blue-100": "#B2BFF9",
           "blue-200": "#6380FB",
           "green-100": "#297373",
