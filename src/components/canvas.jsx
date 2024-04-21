@@ -48,8 +48,6 @@ export default function Canvas() {
 
     const image = await readFileAsBase64(img);
 
-    console.log(image);
-
     const response = await fetch("/api/ocr", {
       method: "POST",
       headers: {
@@ -60,8 +58,6 @@ export default function Canvas() {
         image,
       }),
     });
-
-    console.log(data);
 
     const data = await response.json();
 
@@ -103,6 +99,7 @@ export default function Canvas() {
         </div>
         <div className="w-1/2 h-[15vh] bg-[#292929] rounded-md !mr-0">
           <p className="p-5 text-white">console</p>
+          {data}
         </div>
       </div>
     </div>
