@@ -1,8 +1,11 @@
+import ProtectedPage from "@/components/ProtectedPage";
 import Dashboard from "@/components/instructor/dashboard/dashboard";
 const Page = () => {
   return (
     <div>
-      <Dashboard />
+      <ProtectedPage title="Instructor Dashboard" restriction="instructor">
+        <Dashboard />
+      </ProtectedPage>
     </div>
   );
 };

@@ -14,18 +14,19 @@ const ProtectedPage = ({ children, restriction, title }) => {
       return;
     }
 
-    if (restriction === "onboard" && !session.user.role) {
+    if (restriction === "onboard") {
+      if (session.user.role === "instructor") {
+        redirect(`/instructor`);
+      } else if (session.user.role === "student") {
+        redirect("/student");
+      }
       return;
-    }
-
-    if (restriction === "onboard" && session.user.role) {
-      redirect(`/${session.user.role}`);
     }
 
     if (session.user.role !== restriction) {
       redirect("/403");
     }
-  }, [status]);
+  }, [status, restriction, session]);
 
   return (
     <>
@@ -33,7 +34,7 @@ const ProtectedPage = ({ children, restriction, title }) => {
       {status === "authenticated" && (
         <>
           <title>{title}</title>
-          <div className="flex justify-center items-start w-full h-screen">
+          <div className="w-full h-screen">
             <div className="h-full">{children}</div>
           </div>
         </>
