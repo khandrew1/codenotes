@@ -12,7 +12,7 @@ const Navigation = () => {
       <Navbar.Brand className="ml-4">
         <Link
           href="/"
-          className="inline-flex no-underline text-2xl items-center text-codenotes-ooze hover:text-codenotes-darkgrey font-bold"
+          className="inline-flex no-underline text-2xl items-center text-codenotes-ooze hover:text-codenotes-lightooze font-bold"
         >
           <Image
             src={lightmodelogo}
@@ -32,19 +32,19 @@ const Navigation = () => {
         <Nav className="space-x-2">
           <Nav.Link
             href="/#about"
-            className="!text-codenotes-ooze hover:!text-codenotes-darkgrey"
+            className="!text-codenotes-ooze hover:!text-codenotes-lightooze"
           >
             about
           </Nav.Link>
           <Nav.Link
             href="/#features"
-            className="!text-codenotes-ooze hover:!text-codenotes-darkgrey"
+            className="!text-codenotes-ooze hover:!text-codenotes-lightooze"
           >
             features
           </Nav.Link>
           <Nav.Link
             href="/canvas"
-            className="!text-codenotes-ooze hover:!text-codenotes-darkgrey"
+            className="!text-codenotes-ooze hover:!text-codenotes-lightooze"
           >
             canvas
           </Nav.Link>
@@ -52,7 +52,7 @@ const Navigation = () => {
             onClick={() =>
               signIn("google", { callbackUrl: "/onboard", redirect: true })
             }
-            className="!text-codenotes-ooze hover:!text-codenotes-darkgrey"
+            className="!text-codenotes-ooze hover:!text-codenotes-lightooze"
           >
             login
           </Nav.Link>
