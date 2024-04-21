@@ -1,4 +1,4 @@
-import { GoogleGeminiEffect } from "./ui/Gemini-effect";
+// import { GoogleGeminiEffect } from "./ui/Gemini-effect";
 
 const Content = () => {
   return (
