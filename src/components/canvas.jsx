@@ -10,8 +10,18 @@ const Excalidraw = dynamic(
   },
 );
 
+export const readFileAsBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
+};
+
 export default function Canvas() {
   const [excalidrawAPI, setExcalidrawAPI] = useState(null);
+  const [data, setData] = useState("");
 
   const onRun = async () => {
     if (!excalidrawAPI) {
@@ -24,20 +34,32 @@ export default function Canvas() {
       return;
     }
 
-    const image = await exportToBlob({
-      opts: {
-        elements,
-        appState: {
-          exportWithDarkMode: false,
-        },
-        files: excalidrawAPI.getFiles(),
-        getDimensions: () => {
-          return { width: 350, height: 350 };
-        },
-      },
+    console.log(elements);
+
+    const img = await exportToBlob({
+      elements: excalidrawAPI.getSceneElements(),
+      mimeType: "image/jpg",
+      files: excalidrawAPI.getFiles(),
     });
 
+    const image = await readFileAsBase64(img);
+
     console.log(image);
+
+    const response = await fetch("/api/ocr", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        image,
+      }),
+    });
+
+    const data = await response.json();
+
+    setData(data);
   };
 
   return (
@@ -46,6 +68,7 @@ export default function Canvas() {
       <button onClick={onRun} className="px-8 py-2 bg-green-500 rounded">
         Run
       </button>
+      {data}
     </div>
   );
 }
