@@ -18,7 +18,7 @@ const Content = () => {
 
   return (
     <div
-      className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
+      className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] relative overflow-clip"
       ref={ref}
     >
       <GoogleGeminiEffect
@@ -29,8 +29,8 @@ const Content = () => {
           pathLengthFourth,
           pathLengthFifth,
         ]}
-        title="codenotes"
-        description="deliver and grade assessments anywhere"
+        title="CodeNotes"
+        description="Deliver and grade assessments anywhere"
         className="YourClassName"
       />
     </div>
