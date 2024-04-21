@@ -24,7 +24,7 @@ const Dashboard = () => {
           <p>Regrades</p>
         </div>
         <hr className="w-[95%]" />
-        <div className="w-[95%] flex grid grid-cols-9 font-light">
+        <div className="w-[95%] grid grid-cols-9 font-light">
           {assignments.map((assignment, index) =>
             Object.entries(assignment).map(([key, value], idx) => (
               <div
