@@ -21,10 +21,10 @@ const Content = () => {
 
   return (
     <div className="bg-gradient-to-b from-codenotes-black-100 to-codenotes-black-300 w-full h-screen mt-16">
-      <p className="text-white text-7xl text-center pt-12 font-bold">
+      <p className="text-transparent bg-clip-text bg-gradient-to-r from-white to-codenotes-gray-400 text-7xl animate-gradient bg-300% text-center pt-12 font-bold pb-2">
         Saving The World
       </p>
-      <p className="text-white text-4xl text-center font-bold">
+      <p className="text-transparent bg-clip-text bg-gradient-to-r from-white to-codenotes-gray-400 pb-2 animate-gradient bg-300% text-4xl text-center font-bold">
         One Assignment at a Time
       </p>
       <div className="flex justify-center">
