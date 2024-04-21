@@ -11,12 +11,38 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+        animatedgradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+      },
+      backgroundSize: {
+        "300%": "300%",
+      },
+      animation: {
+        gradient: "animatedgradient 6s linear infinite alternate",
+      },
       colors: {
         codenotes: {
           "black-100": "#252525",
+          "black-200": "#2A2A2A",
+          "black-300": "#111111",
+          "black-400": "#191919",
           "blue-100": "#B2BFF9",
           "blue-200": "#6380FB",
           "green-100": "#297373",
+          "gray-400": "#4F4F58",
           offwhite: "#fafafa",
           lightgrey: "#e4e5f1",
           grey: "#d2d3db",
