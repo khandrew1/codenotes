@@ -23,7 +23,7 @@ export const POST = async (req) => {
 
     console.log(result);
 
-    return res.json({ message: "done!" }, { status: 200 });
+    return res.json({ message: "done!", result: result }, { status: 200 });
   } catch (err) {
     console.log(err);
     return res.json(
