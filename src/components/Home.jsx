@@ -2,7 +2,7 @@
 import { GoogleGeminiEffect } from "./ui/Gemini-effect";
 import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
+import { HeroHighlight, Highlight } from "./ui/Hero-highlight";
 const Content = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -33,6 +33,14 @@ const Content = () => {
         description="Deliver and grade assessments anywhere"
         className="YourClassName"
       />
+
+      <HeroHighlight className="flex flex-col gap-4 items-center justify-center">
+        <p className="text-4xl text-white font-semibold">CHANGING THE WORLD</p>
+
+        <Highlight className="flex items-center px-3 py-2 text-white">
+          ONE CHROMOSOME AT A TIME
+        </Highlight>
+      </HeroHighlight>
     </div>
   );
 };
