@@ -1,12 +1,36 @@
+"use client";
 import { GoogleGeminiEffect } from "./ui/Gemini-effect";
+import { useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const Content = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+
   return (
-    <div className="w-full pt-20">
+    <div
+      className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] relative overflow-clip"
+      ref={ref}
+    >
       <GoogleGeminiEffect
-        pathLengths={[0.5, 0.6, 0.7, 0.8, 0.9]}
-        title="Your Title"
-        description="Your Description"
+        pathLengths={[
+          pathLengthFirst,
+          pathLengthSecond,
+          pathLengthThird,
+          pathLengthFourth,
+          pathLengthFifth,
+        ]}
+        title="CodeNotes"
+        description="Deliver and grade assessments anywhere"
         className="YourClassName"
       />
     </div>
